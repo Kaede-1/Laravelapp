@@ -64,6 +64,11 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     return $this->hasMany('App\Models\Message');
 }
+
+public function contacts()
+    {
+    return $this->hasMany('App\Models\Contact');
+    }
 }
 
 

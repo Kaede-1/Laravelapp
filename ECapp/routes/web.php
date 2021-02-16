@@ -58,8 +58,8 @@ Route::put('users/mypage/password', 'App\Http\Controllers\UserController@update_
 
 Route::post('products/{product}/reviews', 'App\Http\Controllers\ReviewController@store');
 
-Route::get('users/mypage/post', 'App\Http\Controllers\ChatsController@index');
+Route::get('users/mypage/contacts', 'App\Http\Controllers\ContactsController@index')->name('contacts');
 
-Route::get('users/mypage/messages', 'App\Http\Controllers\ChatsController@fetchMessages');
+Route::post('users/mypage/contacts/confirm', 'App\Http\Controllers\ContactsController@confirm')->name('contacts.confirm');
 
-Route::post('users/mypage/messages', 'App\Http\Controllers\ChatsController@sendMessage');
+Route::post('users/mypage/contacts/complete', 'App\Http\Controllers\ContactsController@complete')->name('contacts.complete');
